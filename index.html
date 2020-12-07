@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h1>Gov Map Loader</h1>
-<h2>Blau Engineers</h2>
-
-<form action="map.html">
-  <label for="x1">x1:</label>
-  <input type="text" id="x1" name="x1" value="210000"><br>
-  <label for="y1">y1:</label>
-  <input type="text" id="y1" name="y1" value="602000"><br><br>
-  <label for="x2">x2:</label>
-  <input type="text" id="x2" name="x2" value="213000"><br>
-  <label for="y2">y2:</label>
-  <input type="text" id="y2" name="y2" value="607000"><br><br>
-  <label for="zoomLevel">Zoom level:</label>
-  <input type="text" id="zoomLevel" name="zoomLevel" value="7"><br><br>
-  
-  <label for="mapBackground">Map Background:</label>
-  <select id="mapBackground" name="mapBackground">
-    <option value="0">Map</option>
-    <option value="1">Aerial photo</option>
-    <option selected value="2">Orthophoto</option>
-    <option value="3">Streets with Buildings</option>
-  </select><br>
-  <label for="contours">Show Contours:</label>
-  <input type="checkbox" id="contours" name="contours"><br><br>
-
-  <input type="submit" formtarget="_blank" value="Submit">
-</form> 
-
-</body>
+   <body>
+      <h1>Gov Map Loader</h1>
+      <h2>Blau Engineers</h2>
+      <form action="map.html">
+         <label for="x1">x1:</label>
+         <input type="text" id="x1" name="x1" value="210000"><br>
+         <label for="y1">y1:</label>
+         <input type="text" id="y1" name="y1" value="602000"><br><br>
+         <label for="x2">x2:</label>
+         <input type="text" id="x2" name="x2" value="213000"><br>
+         <label for="y2">y2:</label>
+         <input type="text" id="y2" name="y2" value="607000"><br><br>
+         <label for="zoomLevel">Zoom level:</label>
+         <select id="zoomLevel" name="zoomLevel">
+            <option value="0">1:1,000,000</option>
+            <option value="2">1:500,000</option>
+            <option value="3">250,000</option>
+            <option value="4">1:100,000</option>
+            <option value="5">1:50,000</option>
+            <option value="6">1:25,000</option>
+            <option value="7">1:10,000</option>
+            <option value="8">1:5,000</option>
+            <option value="9">1:2,500</option>
+            <option value="10">1:1,250</option>
+         </select>
+         <br><br>
+         <label for="mapBackground">Map Background:</label>
+         <select id="mapBackground" name="mapBackground">
+            <option value="0">Map</option>
+            <option value="1">Aerial photo</option>
+            <option selected value="2">Orthophoto</option>
+            <option value="3">Streets with Buildings</option>
+            <option value="9">Topographic map</option>
+         </select>
+         <br>
+         <label for="contours">Show Contours:</label>
+         <input type="checkbox" id="contours" name="contours"><br><br>
+         <input type="submit" formtarget="_blank" value="Submit">
+      </form>
+   </body>
 </html>
