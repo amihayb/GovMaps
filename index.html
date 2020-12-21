@@ -1,19 +1,186 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style type="text/css">
+.form-style-1 {
+	margin:10px auto;
+	max-width: 400px;
+	padding: 20px 12px 10px 20px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-1 li {
+	padding: 0;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+.form-style-1 label{
+	margin:0 0 3px 0;
+	display: block;
+	padding:0px;
+	font-weight: bold;
+}
+.form-style-1 input[type=text], 
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea, 
+select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;	
+}
+.form-style-1 input[type=text]:focus, 
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus, 
+.form-style-1 select:focus{
+	-moz-box-shadow: 0 0 8px #88D5E9;
+	-webkit-box-shadow: 0 0 8px #88D5E9;
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+	width: 30%;
+}
+.form-style-1 .field-long{
+	width: 60%;
+}
+.form-style-1 .field-select{
+	width: 60%;
+}
+.form-style-1 .field-textarea{
+	height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+	background: #4691A4;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: bold;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+position: relative;
+  top: 0;
+  left: 0;
+transform: translate(0%, 25%);
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Button */
+.button {
+  background-color: #0066A2; /* Azure */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-decoration: none;
+  display: block;
+  border-radius: 8px;
+  transform: translate(110%, 0%);
+}
+</style>
+</head>
    <body>
+   <form action="map.html" class="form-style-1">
       <h1>Gov Map Loader</h1>
       <h2>Blau Engineers</h2>
-      <form action="map.html">
-         <label for="x1">x1:</label>
-         <input type="text" id="x1" name="x1" value="210000"><br>
-         <label for="y1">y1:</label>
-         <input type="text" id="y1" name="y1" value="602000"><br><br>
-         <label for="x2">x2:</label>
-         <input type="text" id="x2" name="x2" value="213000"><br>
-         <label for="y2">y2:</label>
-         <input type="text" id="y2" name="y2" value="607000"><br><br>
+	  <li>
+         <label for="x1">Buttom left (x,y):</label>
+         <input class="field-divided" type="text" placeholder="First" id="x1" name="x1" value="210000">
+         <input class="field-divided" type="text" placeholder="Last" id="y1" name="y1" value="602000">
+		 </li>
+		 <li>
+         <label for="x2">Top right (x,y):</label>
+         <input class="field-divided" type="text" id="x2" name="x2" value="213000">
+         <input class="field-divided" type="text" id="y2" name="y2" value="607000">
+		 </li>
+		 <li>
          <label for="zoomLevel">Zoom level:</label>
-         <select id="zoomLevel" name="zoomLevel">
+         <select class="field-select" id="zoomLevel" name="zoomLevel">
             <option value="0">1:1,000,000</option>
             <option value="2">1:500,000</option>
             <option value="3">250,000</option>
@@ -25,19 +192,22 @@
             <option value="9">1:2,500</option>
             <option value="10">1:1,250</option>
          </select>
-         <br><br>
+		 </li>
+		 <li>
          <label for="mapBackground">Map Background:</label>
-         <select id="mapBackground" name="mapBackground">
+         <select class="field-select" id="mapBackground" name="mapBackground">
             <option value="0">Map</option>
             <option value="1">Aerial photo</option>
             <option selected value="2">Orthophoto</option>
             <option value="3">Streets with Buildings</option>
             <option value="9">Topographic map</option>
          </select>
-         <br>
+		 </li>
+		 <li><div class="container>
          <label for="contours">Show Contours:</label>
-         <input type="checkbox" id="contours" name="contours"><br><br>
-         <input type="submit" formtarget="_blank" value="Submit">
+         <input class="checkmark" type="checkbox" id="contours" name="contours">
+		 </div></li>
+		 <li><input class="button" type="submit" formtarget="_blank" value="Submit"></li>
       </form>
    </body>
 </html>
