@@ -18,10 +18,14 @@
          y1 = findGetParameter("y1");
          y2 = findGetParameter("y2");
          contours = findGetParameter("contours");
-         if (contours == 'on'){
-         visLayers = ["contour"];
-         } else {
+         migrashim = findGetParameter("migrashim");
          visLayers = [];
+         
+         if (contours == 'on'){
+            visLayers.push("contour");
+         } 
+         if (migrashim == 'on'){
+            visLayers.push("RETZEFMIGRASHIM");
          }
          
          MapWidth =  Math.floor( Math.abs(x2 - x1) * px2km );
